@@ -46,6 +46,7 @@ export async function POST(req) {
   try {
     // Recursively create nested directories
     await fs.ensureDir(fullPath);
+
     return NextResponse.json({ message: "Folder(s) created successfully" });
   } catch (error) {
     return NextResponse.json(
